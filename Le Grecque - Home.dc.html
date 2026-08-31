@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #fefdf9; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #0a4d5c; text-decoration: none; transition: color .3s ease; }
+  a:hover { color: #b8894f; }
+  ::selection { background: #d4a574; color: #0a4d5c; }
+  @keyframes auraRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  @keyframes slowPan { from { transform: scale(1.06) translateY(0); } to { transform: scale(1.14) translateY(-1.5%); } }
+</style>
+</helmet>
+
+<div style="font-family: 'Jost', system-ui, sans-serif; color: #1a3a52; background: #fefdf9; overflow-x: hidden;">
+
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 20px clamp(24px, 5vw, 72px); background: rgba(254, 253, 249, 0.82); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(10, 77, 92, 0.08);">
+    <a href="Le Grecque — Home.dc.html" style="display: flex; flex-direction: column; gap: 2px; line-height: 1;">
+      <span style="font-family: 'Playfair Display', serif; font-size: 20px; letter-spacing: 0.14em; color: #0a4d5c;">LE GRECQUE</span>
+      <span style="font-size: 9px; letter-spacing: 0.34em; color: #8b9e8f; text-transform: uppercase;">Luxury Services · Chania</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: clamp(18px, 3vw, 40px);">
+      <a href="Le Grecque — Services.dc.html" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #1a3a52;" style-hover="color: #b8894f;">Services</a>
+      <a href="Le Grecque — About.dc.html" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #1a3a52;" style-hover="color: #b8894f;">About</a>
+      <a href="#contact" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #1a3a52;" style-hover="color: #b8894f;">Contact</a>
+      <a href="{{ whatsappHref }}" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border: 1px solid #0a4d5c; border-radius: 999px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #0a4d5c; background: transparent; transition: all .35s ease;" style-hover="background: #0a4d5c; color: #f5f1e8; box-shadow: 0 8px 30px rgba(10,77,92,0.24);">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #8b9e8f; box-shadow: 0 0 0 3px rgba(139,158,143,0.25);"></span>WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <section style="position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; background: #0a4d5c;">
+    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2400&q=80" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowPan 26s ease-in-out infinite alternate;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,77,92,0.52) 0%, rgba(10,77,92,0.18) 38%, rgba(10,50,62,0.82) 100%);"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,50,62,0.62) 0%, rgba(10,50,62,0.34) 44%, rgba(10,50,62,0) 70%);"></div>
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 22% 62%, rgba(232,184,107,0.22) 0%, rgba(232,184,107,0) 58%);"></div>
+    <div style="position: relative; width: 100%; padding: 0 clamp(24px, 5vw, 72px) clamp(56px, 8vh, 96px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: end;">
+      <div style="max-width: 820px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 26px;">
+          <span style="width: 46px; height: 1px; background: #d4a574;"></span>
+          <span style="font-size: 10px; letter-spacing: 0.42em; text-transform: uppercase; color: #e8d9bd;">Chania · Crete</span>
+        </div>
+        <h1 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(44px, 7.2vw, 104px); line-height: 0.98; letter-spacing: -0.02em; color: #fefdf9; margin: 0; text-shadow: 0 0 70px rgba(240,244,248,0.28), 0 2px 40px rgba(10,50,62,0.4);">
+          Your private concierge<br><span style="font-style: italic; color: #f0e3c8;">in Chania</span>
+        </h1>
+        <p style="margin: 30px 0 0; max-width: 520px; font-size: clamp(15px, 1.3vw, 18px); font-weight: 300; line-height: 1.75; color: rgba(245,241,232,0.82);">
+          The table that was fully booked. The boat that leaves before the crowds. The villa that never reaches a listing site. One message, and it is handled.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px;">
+          <a href="{{ whatsappHref }}" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: #d4a574; color: #0a3a46; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: all .4s cubic-bezier(.2,.7,.3,1); box-shadow: 0 10px 40px rgba(212,165,116,0.34);" style-hover="background: #e8b86b; box-shadow: 0 16px 56px rgba(232,184,107,0.5); transform: translateY(-2px);">Message on WhatsApp</a>
+          <a href="#plan" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; border: 1px solid rgba(245,241,232,0.5); color: #f5f1e8; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: all .4s ease;" style-hover="background: rgba(245,241,232,0.12); border-color: #f5f1e8;">Plan ahead</a>
+        </div>
+      </div>
+      <sc-if value="{{ showResponseBadge }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; align-items: center; gap: 12px; padding: 14px 20px; border: 1px solid rgba(245,241,232,0.24); border-radius: 999px; background: rgba(10,50,62,0.32); backdrop-filter: blur(10px); white-space: nowrap;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #8fbf9f; box-shadow: 0 0 12px rgba(143,191,159,0.9);"></span>
+          <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,241,232,0.9);">Replying now · typically under 15 min</span>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section data-reveal style="position: relative; padding: clamp(80px, 11vw, 150px) clamp(24px, 5vw, 72px); background: #fefdf9;">
+    <div style="position: absolute; inset: 0; opacity: 0.045; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2772%27 height=%2772%27%3E%3Cpath d=%27M10 62V10h52v42H24V24h28v18H36%27 fill=%27none%27 stroke=%27%230a4d5c%27 stroke-width=%271.5%27/%3E%3C/svg%3E'); background-size: 72px 72px; pointer-events: none;"></div>
+    <div style="position: relative; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 5vw, 80px);">
+      <div style="display: flex; flex-direction: column; gap: 20px; padding: 34px 30px; border-radius: 4px; transition: all .5s ease;" style-hover="background: #f0f4f8; box-shadow: 0 24px 70px rgba(10,77,92,0.09); transform: translateY(-4px);">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#d4a574" stroke-width="1.2"><circle cx="20" cy="20" r="18"></circle><path d="M20 2v36M2 20h36M7.3 7.3l25.4 25.4M32.7 7.3L7.3 32.7"></path><circle cx="20" cy="20" r="7" fill="#f5f1e8" stroke="#0a4d5c"></circle></svg>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 27px; margin: 0; color: #0a4d5c;">Expert curation</h3>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.8; color: #4a6572; text-wrap: pretty;">Twelve years of living here, filtered into a short list. She does not send you options. She sends you the right one, and the reason it is the right one for the day you are having.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px; padding: 34px 30px; border-radius: 4px; transition: all .5s ease;" style-hover="background: #f0f4f8; box-shadow: 0 24px 70px rgba(10,77,92,0.09); transform: translateY(-4px);">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#d4a574" stroke-width="1.2"><rect x="6" y="6" width="28" height="28" transform="rotate(45 20 20)"></rect><rect x="12" y="12" width="16" height="16" transform="rotate(45 20 20)" stroke="#0a4d5c"></rect><circle cx="20" cy="20" r="3" fill="#8b9e8f" stroke="none"></circle></svg>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 27px; margin: 0; color: #0a4d5c;">Local relationships</h3>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.8; color: #4a6572; text-wrap: pretty;">The captains, the winemakers, the family who owns the taverna at the end of the old port. These are not vendors on a list. They pick up when she calls, in August, at short notice.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px; padding: 34px 30px; border-radius: 4px; transition: all .5s ease;" style-hover="background: #f0f4f8; box-shadow: 0 24px 70px rgba(10,77,92,0.09); transform: translateY(-4px);">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#d4a574" stroke-width="1.2"><path d="M4 26c4-6 8-6 12 0s8 6 12 0 8-6 8 0"></path><path d="M4 14c4-6 8-6 12 0s8 6 12 0 8-6 8 0" stroke="#0a4d5c"></path><circle cx="20" cy="34" r="2" fill="#8b9e8f" stroke="none"></circle></svg>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 27px; margin: 0; color: #0a4d5c;">Personal service</h3>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.8; color: #4a6572; text-wrap: pretty;">One person, one number, for the whole stay. No ticketing system, no account manager. If the weather turns at eleven, the day is rearranged by noon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" data-reveal style="padding: clamp(70px, 9vw, 120px) clamp(24px, 5vw, 72px); background: #f5f1e8;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: clamp(40px, 5vw, 64px);">
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+            <span style="width: 34px; height: 1px; background: #d4a574;"></span>
+            <span style="font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: #8b9e8f;">What she handles</span>
+          </div>
+          <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px, 4.6vw, 62px); line-height: 1.05; letter-spacing: -0.015em; margin: 0; color: #0a4d5c;">Ask for the day.<br>She arranges the rest.</h2>
+        </div>
+        <a href="Le Grecque — Services.dc.html" style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #0a4d5c; border-bottom: 1px solid #d4a574; padding-bottom: 6px;" style-hover="color: #b8894f;">All services →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div style="background: #fefdf9; border-top: 2px solid #d4a574; padding: 36px 30px 42px; display: flex; flex-direction: column; gap: 16px; transition: all .45s cubic-bezier(.2,.7,.3,1);" style-hover="background: #ffffff; box-shadow: 0 30px 80px rgba(10,77,92,0.13); transform: translateY(-6px);">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#0a4d5c" stroke-width="1.1"><path d="M8 4v11a3 3 0 003 3h0a3 3 0 003-3V4M11 18v12"></path><path d="M24 4c-3 3-3 9-3 11h6c0-2 0-8-3-11zM24 15v15"></path></svg>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; margin: 0; color: #0a4d5c;">Dining</h3>
+          <p style="margin: 0; font-size: 14px; font-weight: 300; line-height: 1.75; color: #4a6572;">Old port tables held at the hour you want, chef's dinners in private courtyards, and the mountain tavernas that never answer the phone.</p>
+        </div>
+        <div style="background: #fefdf9; border-top: 2px solid #d4a574; padding: 36px 30px 42px; display: flex; flex-direction: column; gap: 16px; transition: all .45s cubic-bezier(.2,.7,.3,1);" style-hover="background: #ffffff; box-shadow: 0 30px 80px rgba(10,77,92,0.13); transform: translateY(-6px);">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#0a4d5c" stroke-width="1.1"><path d="M4 25c3 2 5 2 8 0s5-2 8 0 5 2 8 0"></path><path d="M17 4v16M17 8l8 3-8 3M17 8L9 11l8 3"></path></svg>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; margin: 0; color: #0a4d5c;">On the water</h3>
+          <p style="margin: 0; font-size: 14px; font-weight: 300; line-height: 1.75; color: #4a6572;">Private boats to Balos and Falassarna, timed to reach the lagoon before the day ferries. Skippered yachts, tenders, and quiet coves with no name.</p>
+        </div>
+        <div style="background: #fefdf9; border-top: 2px solid #d4a574; padding: 36px 30px 42px; display: flex; flex-direction: column; gap: 16px; transition: all .45s cubic-bezier(.2,.7,.3,1);" style-hover="background: #ffffff; box-shadow: 0 30px 80px rgba(10,77,92,0.13); transform: translateY(-6px);">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#0a4d5c" stroke-width="1.1"><path d="M3 26l8-13 6 9 4-6 10 10z"></path><circle cx="24" cy="8" r="3"></circle></svg>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; margin: 0; color: #0a4d5c;">Inland</h3>
+          <p style="margin: 0; font-size: 14px; font-weight: 300; line-height: 1.75; color: #4a6572;">Manousakis winery in the afternoon light, guided descents of Samaria, olive harvests, and villages where lunch is still a four-hour proposition.</p>
+        </div>
+        <div style="background: #fefdf9; border-top: 2px solid #d4a574; padding: 36px 30px 42px; display: flex; flex-direction: column; gap: 16px; transition: all .45s cubic-bezier(.2,.7,.3,1);" style-hover="background: #ffffff; box-shadow: 0 30px 80px rgba(10,77,92,0.13); transform: translateY(-6px);">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#0a4d5c" stroke-width="1.1"><rect x="4" y="12" width="26" height="11" rx="3"></rect><path d="M8 12l3-6h12l3 6"></path><circle cx="10" cy="23" r="2.5"></circle><circle cx="24" cy="23" r="2.5"></circle></svg>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; margin: 0; color: #0a4d5c;">Transfers</h3>
+          <p style="margin: 0; font-size: 14px; font-weight: 300; line-height: 1.75; color: #4a6572;">Airport arrivals met by name, discreet drivers on call for the week, helicopter and private aviation arranged when the schedule requires it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="position: relative; padding: clamp(90px, 12vw, 160px) clamp(24px, 5vw, 72px); background: #0a4d5c; overflow: hidden;">
+    <div style="position: absolute; inset: 0; opacity: 0.06; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27120%27 height=%27120%27%3E%3Ccircle cx=%2760%27 cy=%2760%27 r=%2746%27 fill=%27none%27 stroke=%27%23f5f1e8%27 stroke-width=%271%27/%3E%3Ccircle cx=%2760%27 cy=%2760%27 r=%2728%27 fill=%27none%27 stroke=%27%23f5f1e8%27 stroke-width=%271%27/%3E%3Cpath d=%27M60 14v92M14 60h92%27 stroke=%27%23f5f1e8%27 stroke-width=%270.6%27/%3E%3C/svg%3E'); background-size: 120px 120px;"></div>
+    <div style="position: absolute; top: -20%; left: 50%; width: 60vw; height: 60vw; transform: translateX(-50%); background: radial-gradient(circle, rgba(232,184,107,0.16) 0%, rgba(232,184,107,0) 65%); pointer-events: none;"></div>
+    <div style="position: relative; max-width: 940px; margin: 0 auto; text-align: center;">
+      <div style="display: flex; justify-content: center; gap: 7px; margin-bottom: 34px;">
+        <span style="color: #e8b86b; font-size: 15px; letter-spacing: 0.3em;">★★★★★</span>
+      </div>
+      <blockquote style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; font-size: clamp(25px, 3.4vw, 44px); line-height: 1.4; letter-spacing: -0.01em; color: #f5f1e8; text-shadow: 0 0 60px rgba(240,244,248,0.18);">
+        “We had four days and no plan. By the second morning we had stopped making decisions entirely, which is the most expensive luxury there is.”
+      </blockquote>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 42px;">
+        <span style="width: 30px; height: 1px; background: rgba(212,165,116,0.6);"></span>
+        <span style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(245,241,232,0.72);">C. Weller · Villa guest, Falassarna</span>
+        <span style="width: 30px; height: 1px; background: rgba(212,165,116,0.6);"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" data-reveal style="padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 72px); background: #fefdf9;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(56px, 8vw, 110px);">
+      <div style="max-width: 620px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 34px; height: 1px; background: #d4a574;"></span>
+          <span style="font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: #8b9e8f;">Recently arranged</span>
+        </div>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.015em; margin: 0; color: #0a4d5c;">Four days, named.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 64px); align-items: center;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px;">
+            <div style="position: relative; aspect-ratio: 3/4; overflow: hidden; background: linear-gradient(135deg, #0a4d5c, #8b9e8f);">
+              <img src="https://images.unsplash.com/photo-1531169356216-34b7e403b91c?auto=format&fit=crop&w=1400&q=80" alt="Balos lagoon from the cliff path" style="width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.3,1);" style-hover="transform: scale(1.05);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(200deg, rgba(240,244,248,0.12), rgba(139,158,143,0.1));"></div>
+            </div>
+            <figcaption style="font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #8b9e8f;">Balos</figcaption>
+          </figure>
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px; padding-top: clamp(20px, 4vw, 48px);">
+            <div style="position: relative; aspect-ratio: 3/4; overflow: hidden; background: linear-gradient(135deg, #8b9e8f, #d4a574);">
+              <img src="https://images.unsplash.com/photo-1725349872507-2a49575f211d?auto=format&fit=crop&w=1400&q=80" alt="Falassarna, west coast of Crete" style="width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.3,1);" style-hover="transform: scale(1.05);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(160deg, rgba(212,165,116,0.12), rgba(10,77,92,0.1));"></div>
+            </div>
+            <figcaption style="font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #8b9e8f;">Falassarna</figcaption>
+          </figure>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <span style="font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: #b8894f;">01 · By sea</span>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.15; margin: 0; color: #0a4d5c;">Balos and Falassarna, before the ferries</h3>
+          <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.85; color: #4a6572; max-width: 46ch; text-wrap: pretty;">A private boat out of Kissamos at seven, anchored in the lagoon while it is still empty, lunch on board, and the Falassarna reefs in the afternoon when the light goes gold. Back before the last ferry stirs the water.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 64px); align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 18px; order: 2;" style-hover="">
+          <span style="font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: #b8894f;">02 · Inland</span>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.15; margin: 0; color: #0a4d5c;">An afternoon at Manousakis</h3>
+          <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.85; color: #4a6572; max-width: 46ch; text-wrap: pretty;">Vatolakkos, late afternoon, tasting through the Nostos labels with the family rather than a guide. A long table under the vines afterwards, and a driver who waits so nobody counts glasses.</p>
+        </div>
+        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden; order: 1; background: linear-gradient(135deg, #8b9e8f, #d4a574);">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80" alt="Vineyard table" style="width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.3,1);" style-hover="transform: scale(1.05);">
+          <div style="position: absolute; inset: 0; background: linear-gradient(160deg, rgba(212,165,116,0.16), rgba(10,77,92,0.1));"></div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 64px); align-items: center;">
+        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden; background: linear-gradient(135deg, #1a3a52, #d4a574);">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" alt="Harbour dining" style="width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.3,1);" style-hover="transform: scale(1.05);">
+          <div style="position: absolute; inset: 0; background: linear-gradient(200deg, rgba(240,244,248,0.12), rgba(10,77,92,0.16));"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <span style="font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: #b8894f;">03 · The old port</span>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.15; margin: 0; color: #0a4d5c;">The table by the water at nine</h3>
+          <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.85; color: #4a6572; max-width: 46ch; text-wrap: pretty;">August, four days' notice, the Venetian harbour full. The table you are given is the one two rows back. The table she is given faces the lighthouse, and the kitchen already knows what you do not eat.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 64px); align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 18px; order: 2;">
+          <span style="font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: #b8894f;">04 · Where you stay</span>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.15; margin: 0; color: #0a4d5c;">Villas above Falassarna</h3>
+          <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.85; color: #4a6572; max-width: 46ch; text-wrap: pretty;">Six houses on the western headland, most of which have never appeared on a booking platform. Staffed to the level you ask for, from a housekeeper twice a week to a chef every evening.</p>
+        </div>
+        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden; order: 1; background: linear-gradient(135deg, #f0f4f8, #8b9e8f);">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80" alt="Villa terrace" style="width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.3,1);" style-hover="transform: scale(1.05);">
+          <div style="position: absolute; inset: 0; background: linear-gradient(160deg, rgba(139,158,143,0.14), rgba(212,165,116,0.12));"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-reveal style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); background: #f0f4f8;">
+    <div style="position: relative; padding: clamp(64px, 8vw, 120px) clamp(28px, 5vw, 90px); background: linear-gradient(155deg, #0a4d5c 0%, #1a3a52 58%, #123a46 100%); overflow: hidden;">
+      <div style="position: absolute; bottom: -30%; right: -20%; width: 70%; height: 70%; background: radial-gradient(circle, rgba(232,184,107,0.24) 0%, rgba(232,184,107,0) 68%);"></div>
+      <div style="position: relative;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px;">
+          <span style="width: 34px; height: 1px; background: #d4a574;"></span>
+          <span style="font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: #e8d9bd;">Get in touch</span>
+        </div>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -0.015em; margin: 0; color: #fefdf9; text-shadow: 0 0 60px rgba(240,244,248,0.2);">Ready to experience Chania?</h2>
+        <p style="margin: 24px 0 40px; max-width: 42ch; font-size: 15px; font-weight: 300; line-height: 1.85; color: rgba(245,241,232,0.78);">Already here and need tonight solved, or still three months out and building the week. Either way, start with a message.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 380px;">
+          <a href="{{ whatsappHref }}" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 26px; border-radius: 2px; background: #d4a574; color: #0a3a46; transition: all .4s ease;" style-hover="background: #e8b86b; box-shadow: 0 14px 46px rgba(232,184,107,0.42); transform: translateY(-2px);">
+            <span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">WhatsApp</span>
+            <span style="font-size: 13px; font-weight: 300;">+30 694 000 0000</span>
+          </a>
+          <a href="{{ emailHref }}" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 26px; border-radius: 2px; border: 1px solid rgba(245,241,232,0.34); color: #f5f1e8; transition: all .4s ease;" style-hover="background: rgba(245,241,232,0.1); border-color: #f5f1e8;">
+            <span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Email</span>
+            <span style="font-size: 13px; font-weight: 300;">hello@legrecque.gr</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="plan" style="padding: clamp(64px, 8vw, 120px) clamp(28px, 5vw, 90px); background: #f0f4f8;">
+      <span style="font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: #8b9e8f;">Planning ahead</span>
+      <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.15; margin: 18px 0 34px; color: #0a4d5c;">Tell her about the stay</h3>
+      <div style="display: flex; flex-direction: column; gap: 26px; max-width: 460px;">
+        <label style="display: flex; flex-direction: column; gap: 9px;">
+          <span style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8b9e8f;">Name</span>
+          <input type="text" placeholder="Your name" style="border: none; border-bottom: 1px solid rgba(10,77,92,0.22); background: transparent; padding: 11px 2px; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; color: #0a4d5c; outline: none; transition: all .35s ease;" style-focus="border-bottom-color: #d4a574; background: rgba(212,165,116,0.07);">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 9px;">
+          <span style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8b9e8f;">Email</span>
+          <input type="email" placeholder="you@email.com" style="border: none; border-bottom: 1px solid rgba(10,77,92,0.22); background: transparent; padding: 11px 2px; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; color: #0a4d5c; outline: none; transition: all .35s ease;" style-focus="border-bottom-color: #d4a574; background: rgba(212,165,116,0.07);">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 9px;">
+          <span style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8b9e8f;">Dates and party</span>
+          <input type="text" placeholder="14–21 July · 6 guests" style="border: none; border-bottom: 1px solid rgba(10,77,92,0.22); background: transparent; padding: 11px 2px; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; color: #0a4d5c; outline: none; transition: all .35s ease;" style-focus="border-bottom-color: #d4a574; background: rgba(212,165,116,0.07);">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 9px;">
+          <span style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8b9e8f;">What you have in mind</span>
+          <textarea rows="3" placeholder="A boat day, a dinner, or the whole week" style="border: none; border-bottom: 1px solid rgba(10,77,92,0.22); background: transparent; padding: 11px 2px; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; color: #0a4d5c; outline: none; resize: none; transition: all .35s ease;" style-focus="border-bottom-color: #d4a574; background: rgba(212,165,116,0.07);"></textarea>
+        </label>
+        <button type="button" onClick="{{ submit }}" style="align-self: flex-start; padding: 16px 36px; border: 1px solid #0a4d5c; border-radius: 999px; background: transparent; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #0a4d5c; cursor: pointer; transition: all .4s ease;" style-hover="background: #0a4d5c; color: #f5f1e8; box-shadow: 0 12px 40px rgba(10,77,92,0.24);">{{ submitLabel }}</button>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0a3a46; padding: 0 clamp(24px, 5vw, 72px) 40px;">
+    <div style="height: 3px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%273%27%3E%3Cpath d=%27M0 1.5h10M14 1.5h4M22 1.5h4M30 1.5h10%27 stroke=%27%23d4a574%27 stroke-width=%272%27/%3E%3C/svg%3E'); background-size: 40px 3px; opacity: 0.5;"></div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; padding: 56px 0 44px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 22px; letter-spacing: 0.14em; color: #f5f1e8;">LE GRECQUE</span>
+        <span style="font-size: 12px; font-weight: 300; line-height: 1.8; color: rgba(245,241,232,0.55); max-width: 30ch;">Private concierge and luxury services. Chania, Crete.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8b9e8f;">Pages</span>
+        <a href="Le Grecque — Services.dc.html" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">Services</a>
+        <a href="Le Grecque — About.dc.html" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">About</a>
+        <a href="#contact" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">Contact</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8b9e8f;">Direct</span>
+        <a href="{{ whatsappHref }}" target="_blank" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">+30 694 000 0000</a>
+        <a href="{{ emailHref }}" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">hello@legrecque.gr</a>
+        <a href="https://instagram.com" target="_blank" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">Instagram</a>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid rgba(245,241,232,0.1); font-size: 11px; font-weight: 300; letter-spacing: 0.08em; color: rgba(245,241,232,0.4);">
+      <span>© 2026 Le Grecque Luxury Services</span>
+      <span>Chania · Crete · Greece</span>
+    </div>
+  </footer>
+
+  <a href="{{ whatsappHref }}" target="_blank" style="position: fixed; right: clamp(18px, 3vw, 34px); bottom: clamp(18px, 3vw, 34px); z-index: 60; display: flex; align-items: center; gap: 10px; padding: 15px 24px; border-radius: 999px; background: #0a4d5c; color: #f5f1e8; box-shadow: 0 14px 44px rgba(10,58,70,0.34); transition: all .4s ease;" style-hover="background: #d4a574; color: #0a3a46; box-shadow: 0 18px 56px rgba(212,165,116,0.5); transform: translateY(-2px);">
+    <span style="width: 7px; height: 7px; border-radius: 50%; background: #8fbf9f; box-shadow: 0 0 10px rgba(143,191,159,0.9);"></span>
+    <span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;">Message her</span>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;306940000000&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@legrecque.gr&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showResponseBadge&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1)'; });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+    this._io = io;
+    const revealAll = () => els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+    const de = document.documentElement;
+    if (!('IntersectionObserver' in window) || de.scrollHeight <= de.clientHeight + 4) revealAll();
+    this._t = setTimeout(() => { if ((window.scrollY || de.scrollTop || 0) === 0) revealAll(); }, 2200);
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    const num = this.props.whatsappNumber ?? '306940000000';
+    const email = this.props.email ?? 'hello@legrecque.gr';
+    return {
+      whatsappHref: 'https://wa.me/' + String(num).replace(/[^0-9]/g, ''),
+      emailHref: 'mailto:' + email,
+      showResponseBadge: this.props.showResponseBadge ?? true,
+      submitLabel: this.state.sent ? 'Sent — she will reply shortly' : 'Send enquiry',
+      submit: () => this.setState({ sent: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

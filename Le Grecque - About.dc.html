@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #fefdf9; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #0a4d5c; text-decoration: none; transition: color .3s ease; }
+  a:hover { color: #b8894f; }
+  ::selection { background: #d4a574; color: #0a4d5c; }
+</style>
+</helmet>
+
+<div style="font-family: 'Jost', system-ui, sans-serif; color: #1a3a52; background: #fefdf9; overflow-x: hidden;">
+
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 20px clamp(24px, 5vw, 72px); background: rgba(254, 253, 249, 0.86); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(10, 77, 92, 0.08);">
+    <a href="Le Grecque — Home.dc.html" style="display: flex; flex-direction: column; gap: 2px; line-height: 1;">
+      <span style="font-family: 'Playfair Display', serif; font-size: 20px; letter-spacing: 0.14em; color: #0a4d5c;">LE GRECQUE</span>
+      <span style="font-size: 9px; letter-spacing: 0.34em; color: #8b9e8f; text-transform: uppercase;">Luxury Services · Chania</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: clamp(18px, 3vw, 40px);">
+      <a href="Le Grecque — Services.dc.html" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #1a3a52;" style-hover="color: #b8894f;">Services</a>
+      <a href="Le Grecque — About.dc.html" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #b8894f;">About</a>
+      <a href="{{ whatsappHref }}" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border: 1px solid #0a4d5c; border-radius: 999px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #0a4d5c; transition: all .35s ease;" style-hover="background: #0a4d5c; color: #f5f1e8; box-shadow: 0 8px 30px rgba(10,77,92,0.24);">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #8b9e8f; box-shadow: 0 0 0 3px rgba(139,158,143,0.25);"></span>WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <header style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); min-height: 88vh; background: #f5f1e8;">
+    <div style="display: flex; flex-direction: column; justify-content: center; padding: clamp(140px, 18vh, 190px) clamp(28px, 5vw, 80px) clamp(60px, 8vw, 90px);">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px;">
+        <span style="width: 46px; height: 1px; background: #d4a574;"></span>
+        <span style="font-size: 10px; letter-spacing: 0.42em; text-transform: uppercase; color: #8b9e8f;">About</span>
+      </div>
+      <h1 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(38px, 5.4vw, 76px); line-height: 1.03; letter-spacing: -0.02em; margin: 0; color: #0a4d5c;">Twelve summers<br><span style="font-style: italic; color: #b8894f;">of knowing who to call</span></h1>
+      <p style="margin: 30px 0 0; max-width: 46ch; font-size: clamp(15px, 1.2vw, 17px); font-weight: 300; line-height: 1.85; color: #4a6572; text-wrap: pretty;">Le Grecque is one person, working with a small circle of captains, chefs, drivers, and villa owners across western Crete. Not an agency, and deliberately not a large one.</p>
+    </div>
+    <div style="position: relative; min-height: 46vh; overflow: hidden; background: linear-gradient(135deg, #0a4d5c, #8b9e8f);">
+      <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80" alt="Chania old town" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(200deg, rgba(240,244,248,0.12), rgba(10,77,92,0.2));"></div>
+    </div>
+  </header>
+
+  <section data-reveal style="padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 72px); background: #fefdf9;">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(36px, 6vw, 90px);">
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 3vw, 40px); line-height: 1.15; margin: 0; color: #0a4d5c;">Why one person, and not a company</h2>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9; color: #4a6572; text-wrap: pretty;">Concierge work fails at the handover. A request passes from an inbox to a coordinator to a supplier, and by the time it reaches the person with the boat, the reason behind it has been lost. Here there is no handover. The person you message is the person who calls the harbour.</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9; color: #4a6572; text-wrap: pretty;">That sets a limit on how many guests can be looked after at once, particularly in July and August. It is the reason returning clients tend to write months ahead, and the reason the answer is occasionally no.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(26px, 3vw, 40px); line-height: 1.15; margin: 0; color: #0a4d5c;">What the relationships are worth</h2>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9; color: #4a6572; text-wrap: pretty;">A restaurant in the old port turns away dozens of walk-ins on an August evening. It holds a handful of tables back for people it trusts to arrive on time, order properly, and treat the staff well. Access is not bought. It is accumulated, one season at a time, and it can be lost.</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9; color: #4a6572; text-wrap: pretty;">The same is true of the captain who will move a charter by an hour, and the family who will open the winery on a day it is closed. Those favours exist because she has spent twelve years not spending them carelessly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="position: relative; padding: clamp(70px, 9vw, 120px) clamp(24px, 5vw, 72px); background: #0a4d5c; overflow: hidden;">
+    <div style="position: absolute; inset: 0; opacity: 0.06; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27120%27 height=%27120%27%3E%3Ccircle cx=%2760%27 cy=%2760%27 r=%2746%27 fill=%27none%27 stroke=%27%23f5f1e8%27 stroke-width=%271%27/%3E%3Ccircle cx=%2760%27 cy=%2760%27 r=%2728%27 fill=%27none%27 stroke=%27%23f5f1e8%27 stroke-width=%271%27/%3E%3C/svg%3E'); background-size: 120px 120px;"></div>
+    <div style="position: relative; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: clamp(30px, 4vw, 60px);">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: clamp(38px, 4.4vw, 60px); line-height: 1; color: #e8b86b;">12</span>
+        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,241,232,0.6);">Summers in Chania</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: clamp(38px, 4.4vw, 60px); line-height: 1; color: #e8b86b;">40+</span>
+        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,241,232,0.6);">Partners across the region</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: clamp(38px, 4.4vw, 60px); line-height: 1; color: #e8b86b;">70%</span>
+        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,241,232,0.6);">Guests who return</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: clamp(38px, 4.4vw, 60px); line-height: 1; color: #e8b86b;">15′</span>
+        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,241,232,0.6);">Typical reply time</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="padding: clamp(80px, 10vw, 130px) clamp(24px, 5vw, 72px); background: #f0f4f8;">
+    <div style="max-width: 1080px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 44px;">
+        <span style="width: 34px; height: 1px; background: #d4a574;"></span>
+        <span style="font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: #8b9e8f;">Who she works with</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: rgba(10,77,92,0.14);">
+        <div style="background: #f0f4f8; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 16px; color: #0a4d5c;">Villa guests</span>
+          <span style="font-size: 13px; font-weight: 300; line-height: 1.75; color: #4a6572;">Private houses across the west, staffed and provisioned before arrival.</span>
+        </div>
+        <div style="background: #f0f4f8; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 16px; color: #0a4d5c;">Yacht and charter parties</span>
+          <span style="font-size: 13px; font-weight: 300; line-height: 1.75; color: #4a6572;">Berths, provisioning, shore days, and dinners held for a moving schedule.</span>
+        </div>
+        <div style="background: #f0f4f8; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 16px; color: #0a4d5c;">Hotel guests</span>
+          <span style="font-size: 13px; font-weight: 300; line-height: 1.75; color: #4a6572;">Everything beyond the front desk, for people who want a local rather than a lobby.</span>
+        </div>
+        <div style="background: #f0f4f8; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 16px; color: #0a4d5c;">Weddings and celebrations</span>
+          <span style="font-size: 13px; font-weight: 300; line-height: 1.75; color: #4a6572;">Guest logistics, welcome dinners, and the days on either side of the day itself.</span>
+        </div>
+        <div style="background: #f0f4f8; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 16px; color: #0a4d5c;">Returning clients</span>
+          <span style="font-size: 13px; font-weight: 300; line-height: 1.75; color: #4a6572;">Preferences already on file, from the driver you liked to the wine you asked about.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 72px); background: #fefdf9;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <span style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 0.6; color: #d4a574;">“</span>
+      <blockquote style="margin: 22px 0 0; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; font-size: clamp(22px, 2.8vw, 36px); line-height: 1.45; color: #0a4d5c;">She rearranged an entire wedding weekend when the wind turned, and told us about it afterwards.</blockquote>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 34px;">
+        <span style="width: 28px; height: 1px; background: #d4a574;"></span>
+        <span style="font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: #8b9e8f;">A. and M. Lindqvist · Kissamos</span>
+        <span style="width: 28px; height: 1px; background: #d4a574;"></span>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="position: relative; padding: clamp(80px, 10vw, 130px) clamp(24px, 5vw, 72px); background: linear-gradient(155deg, #0a4d5c 0%, #1a3a52 60%, #123a46 100%); overflow: hidden; text-align: center;">
+    <div style="position: absolute; top: -25%; left: 50%; width: 60vw; height: 60vw; transform: translateX(-50%); background: radial-gradient(circle, rgba(232,184,107,0.2) 0%, rgba(232,184,107,0) 66%);"></div>
+    <div style="position: relative; max-width: 720px; margin: 0 auto;">
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.08; margin: 0; color: #fefdf9; text-shadow: 0 0 60px rgba(240,244,248,0.2);">Start the conversation</h2>
+      <p style="margin: 22px auto 38px; max-width: 44ch; font-size: 15px; font-weight: 300; line-height: 1.85; color: rgba(245,241,232,0.78);">Whether you land tomorrow or next June, the first message is the same.</p>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;">
+        <a href="{{ whatsappHref }}" target="_blank" style="padding: 17px 34px; border-radius: 999px; background: #d4a574; color: #0a3a46; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: all .4s ease; box-shadow: 0 10px 40px rgba(212,165,116,0.34);" style-hover="background: #e8b86b; box-shadow: 0 16px 56px rgba(232,184,107,0.5); transform: translateY(-2px);">Message on WhatsApp</a>
+        <a href="{{ emailHref }}" style="padding: 17px 34px; border-radius: 999px; border: 1px solid rgba(245,241,232,0.5); color: #f5f1e8; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: all .4s ease;" style-hover="background: rgba(245,241,232,0.12); border-color: #f5f1e8;">hello@legrecque.gr</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0a3a46; padding: 0 clamp(24px, 5vw, 72px) 40px;">
+    <div style="height: 3px; background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%273%27%3E%3Cpath d=%27M0 1.5h10M14 1.5h4M22 1.5h4M30 1.5h10%27 stroke=%27%23d4a574%27 stroke-width=%272%27/%3E%3C/svg%3E'); background-size: 40px 3px; opacity: 0.5;"></div>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; padding: 48px 0 36px;">
+      <a href="Le Grecque — Home.dc.html" style="font-family: 'Playfair Display', serif; font-size: 22px; letter-spacing: 0.14em; color: #f5f1e8;">LE GRECQUE</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 28px;">
+        <a href="Le Grecque — Home.dc.html" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">Home</a>
+        <a href="Le Grecque — Services.dc.html" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">Services</a>
+        <a href="{{ emailHref }}" style="font-size: 13px; font-weight: 300; color: rgba(245,241,232,0.78);" style-hover="color: #d4a574;">hello@legrecque.gr</a>
+      </div>
+    </div>
+    <div style="padding-top: 24px; border-top: 1px solid rgba(245,241,232,0.1); font-size: 11px; font-weight: 300; letter-spacing: 0.08em; color: rgba(245,241,232,0.4);">© 2026 Le Grecque Luxury Services · Chania, Crete</div>
+  </footer>
+
+  <a href="{{ whatsappHref }}" target="_blank" style="position: fixed; right: clamp(18px, 3vw, 34px); bottom: clamp(18px, 3vw, 34px); z-index: 60; display: flex; align-items: center; gap: 10px; padding: 15px 24px; border-radius: 999px; background: #0a4d5c; color: #f5f1e8; box-shadow: 0 14px 44px rgba(10,58,70,0.34); transition: all .4s ease;" style-hover="background: #d4a574; color: #0a3a46; transform: translateY(-2px);">
+    <span style="width: 7px; height: 7px; border-radius: 50%; background: #8fbf9f; box-shadow: 0 0 10px rgba(143,191,159,0.9);"></span>
+    <span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;">Message her</span>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;306940000000&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@legrecque.gr&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s cubic-bezier(.2,.7,.3,1)'; });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(el => io.observe(el));
+    this._io = io;
+    const revealAll = () => els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+    const de = document.documentElement;
+    if (!('IntersectionObserver' in window) || de.scrollHeight <= de.clientHeight + 4) revealAll();
+    this._t = setTimeout(() => { if ((window.scrollY || de.scrollTop || 0) === 0) revealAll(); }, 2200);
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    const num = this.props.whatsappNumber ?? '306940000000';
+    const email = this.props.email ?? 'hello@legrecque.gr';
+    return { whatsappHref: 'https://wa.me/' + String(num).replace(/[^0-9]/g, ''), emailHref: 'mailto:' + email };
+  }
+}
+</script>
+</body>
+</html>
